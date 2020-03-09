@@ -54,7 +54,7 @@ public class TrainSystemTest {
 	@Test
 	public void SpeedLimitTest() {
 		//
-		assert sensor.getSpeedLimit() == 6;
+		assert sensor.getSpeedLimit() != 0;
 	}
 
 	@Test
