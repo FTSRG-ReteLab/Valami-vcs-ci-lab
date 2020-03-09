@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
-import hu.bme.mit.train.*;
 
 public class TrainSensorTest {
 
