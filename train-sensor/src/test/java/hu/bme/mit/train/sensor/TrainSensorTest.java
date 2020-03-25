@@ -52,4 +52,13 @@ public class TrainSensorTest {
         sensor.overrideSpeedLimit(50);
         verify(user,times(1)).setAlarmState(true);
     }
+
+    @Test
+    public void SpeedLimitGetTest() {
+        when(controller.getReferenceSpeed()).thenReturn(150);
+
+        sensor.overrideSpeedLimit(200);
+        assert sensor.getSpeedLimit()==200;
+    }
+
 }
