@@ -53,8 +53,7 @@ public class TrainSystemTest {
 
 	@Test
 	public void SpeedLimitTest() {
-		//
-		assert sensor.getSpeedLimit() != 0;
+		Assert.assertNotEquals(sensor.getSpeedLimit(), 0);
 	}
 
 	@Test
@@ -64,7 +63,7 @@ public class TrainSystemTest {
 		tacho.put(2, user.getJoystickPosition(), sensor.getSpeedLimit());
 		tacho.put(3, user.getJoystickPosition(), sensor.getSpeedLimit());
 
-		assert !(tacho.isEmpty());
+		Assert.assertFalse(tacho.isEmpty());
 	}
 	
 }
