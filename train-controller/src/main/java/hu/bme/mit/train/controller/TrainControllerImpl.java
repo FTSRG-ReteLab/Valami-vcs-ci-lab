@@ -11,6 +11,7 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
+
 	public TrainControllerImpl(){
 		Timer timer=new Timer();
 		timer.schedule(new TimerTask() {
