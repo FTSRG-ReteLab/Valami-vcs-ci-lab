@@ -2,6 +2,9 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
@@ -10,14 +13,16 @@ public class TrainControllerImpl implements TrainController {
 
 	public TrainControllerImpl() {
 		Thread th = new Thread(() -> {
-			while (true) {
-				try {
+			try{
+				while (true){
 					followSpeed();
 					Thread.sleep(1000);
 				}
-				catch (InterruptedException exc) {
-					exc.printStackTrace();
-				}
+			}
+			catch(InterruptedException exc)
+			{
+				Logger.getLogger(TrainControllerImpl.class.getName()).log(Level.INFO, "Interrupted!", exc);
+				Thread.currentThread().interrupt();
 			}
 		});
 		th.start();
