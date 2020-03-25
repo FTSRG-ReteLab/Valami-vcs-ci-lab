@@ -2,7 +2,6 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
-import java.sql.Time;
 import java.util.Timer;
 import java.util.TimerTask;
 
